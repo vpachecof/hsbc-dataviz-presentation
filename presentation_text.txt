@@ -1,0 +1,649 @@
+
+
+
+
+
+\section{Introduction}
+
+
+\begin{frame}[label=intro]{Introduction slide}
+\begin{quotation}
+  The purpose of visualization is insight, not pictures.\\
+  Ben Shneiderman
+\end{quotation}
+
+\begin{center}
+\includegraphics[scale=0.3]{img/florence.png}
+\end{center}
+
+Florence Nightingale stated that her visualization was ''to affect thro’ the Eyes what we fail to convey to the public through their word-proof ears''
+\end{frame}
+
+\begin{frame}{title}
+% Florence
+
+\tiny{https://www.openculture.com/2016/03/florence-nightingale-created-revolutionary-visualizations-of-statistics-that-saved-lives-1855.html}
+\end{frame}
+
+\begin{frame}{Visual Encoding and Preattentive Attributes}
+
+Preattentive attributes \textbf{show where to look}
+
+\begin{columns}[T] % align columns
+\begin{column}{.68\textwidth}
+\begin{center}
+\includegraphics[scale=0.3]{img/preattentive.png}
+\end{center}
+
+\end{column}%
+\hfill%
+\begin{column}{.38\textwidth}
+
+Try to find the word HSBC\\
+\textcolor{gray}{ACUHFASOYBWQPCMZA}\\
+
+\vspace{0.2cm}
+
+Much easier now
+\textcolor{gray}{ACU}\textcolor{red}{H}\textcolor{gray}{FA}\textcolor{red}{S}\textcolor{gray}{OY}\textcolor{red}{B}\textcolor{gray}{WQP}\textcolor{red}{C}\textcolor{gray}{MZA} \\
+
+\vspace{0.2cm}
+
+And we lost the benefit of using red here\\
+\textcolor{yellow}{A}\textcolor{green}{C}\textcolor{purple}{U}\textcolor{red}{H}\textcolor{green}{F}\textcolor{cyan}{A}\textcolor{red}{S}\textcolor{gray}{O}\textcolor{blue}{}Y\textcolor{red}{B}\textcolor{yellow}{W}\textcolor{blue}{Q}P\textcolor{red}{C}\textcolor{green}{M}Z\textcolor{cyan}{A} 
+\end{column}
+\end{columns}
+
+
+
+\end{frame}
+
+\begin{frame}{Exploratory vs Explanatory Analysis}
+
+\begin{itemize}
+    \item \textbf{Exploratory analysis:} What lies within your data - Where you data comes from? How is it labeled? Is it structured or unstructured? Are there holes? Any specific trends? Which questions are you trying to answer with it?
+    
+    \vspace{0.5cm}
+    
+    \item \textbf{Explanatory analysis:} What you present to your audience - What do you want to show? You did in depth analysis in the exploratory stage, but not everything is relevant to be in the final report.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Anscombe's Quartet}
+\begin{columns}[T] % align columns
+\begin{column}{.68\textwidth}
+\begin{table}
+\begin{tabular}{rr|rr|rr|rr}
+x    & y     & x    & y    & x    & y     & x    & y     \\ \hline
+10 & 8.04  & 10 & 9.14 & 10 & 7.46  & 8  & 6.58  \\
+8  & 6.95  & 8  & 8.14 & 8  & 6.77  & 8  & 5.76  \\
+13 & 7.58  & 13 & 8.74 & 13 & 12.74 & 8  & 7.71  \\
+9  & 8.81  & 9  & 8.77 & 9  & 7.11  & 8  & 8.84  \\
+11 & 8.33  & 11 & 9.26 & 11 & 7.81  & 8  & 8.47  \\
+14 & 9.96  & 14 & 8.10 & 14 & 8.84  & 8  & 7.04  \\
+6  & 7.24  & 6  & 6.13 & 6  & 6.08  & 8  & 5.25  \\
+4  & 4.26  & 4  & 3.10 & 4  & 5.39  & 19 & 12.50 \\
+12 & 10.84 & 12 & 9.13 & 12 & 8.15  & 8  & 5.56  \\
+7  & 4.82  & 7  & 7.26 & 7  & 6.42  & 8  & 7.91  \\
+5  & 5.68  & 5  & 4.74 & 5  & 5.73  & 8  & 6.89 
+\end{tabular}
+\end{table}
+
+\end{column}%
+\hfill%
+\begin{column}{.38\textwidth}
+\begin{equation*}
+    \overline{x} = 9,  \sigma_x = 11
+\end{equation*}
+
+\begin{equation*}
+\overline{y} = 7.5, \sigma_y = 4.125
+\end{equation*}
+ 
+\begin{equation*}
+\rho_{xy} = 0.816
+\end{equation*}
+
+\begin{equation*}
+y = 3 + 0.5x
+\end{equation*}
+
+\begin{equation*}
+R^2 = 0.67
+\end{equation*}
+\end{column}%
+\end{columns}
+
+\tiny{Anscombe, F. J. (1973). "Graphs in Statistical Analysis". American Statistician. 27 (1): 17–21}
+\end{frame}
+
+\begin{frame}{Anscombe's Quartet}
+The four sets are identical when we look at a simple summary statistics, but vary considerably when graphed!
+    \begin{center}
+        \includegraphics[scale=0.2]{img/anscombe.png}
+    \end{center}
+\tiny{By Anscombe.svg: Schutz(label using subscripts): Avenue - Anscombe.svg, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9838454}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Visual Perception}
+
+\begin{frame}{Cognitive load and Clutter}
+\begin{itemize}
+    \item Cognitive Load: mental effort that's required to learn new information
+    \item Clutter: visual elements that take up space but don't increase understanding
+\end{itemize}
+
+\vspace{0.3cm}
+
+\textbf{Types of visual clutter:} lack of visual order
+
+\vspace{0.3cm}
+
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+\centering
+\includegraphics[scale=0.2]{img/clutter1.png}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\centering 
+\includegraphics<2>[scale=0.2]{img/clutter2.png}
+\end{column}%
+\end{columns}
+\tiny{Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015}
+\end{frame}
+
+\begin{frame}{Cognitive load and Clutter}
+\textbf{Types of visual clutter:} non-strategic use of contrast
+
+\vspace{0.3cm}
+
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+\centering
+\includegraphics[scale=0.22]{img/contrast1.png}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\centering 
+\includegraphics<2>[scale=0.22]{img/contrast2.png}
+\end{column}%
+\end{columns}
+\tiny{Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015}
+\end{frame}
+
+\begin{frame}{Decluttering and preattentive attributes example}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+\centering
+Original image
+\includegraphics[scale=0.25]{img/declutter1.png}
+\end{column}%
+\hfill%
+\begin{column}<2->{.48\textwidth}
+Remove borders, grid-lines and markers
+\centering
+\includegraphics<2>[scale=0.27]{img/declutter4.png}
+\end{column}%
+\end{columns}
+\tiny{Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015}
+\end{frame}
+
+\begin{frame}{Decluttering and preattentive attributes example}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+\centering
+Original image
+\includegraphics[scale=0.25]{img/declutter1.png}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+Clean up labels and axes
+\centering
+\includegraphics[scale=0.27]{img/declutter5.png}
+\end{column}%
+\end{columns}
+\tiny{Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015}
+\end{frame}
+
+\begin{frame}{Decluttering and preattentive attributes example}
+\begin{columns}[T] % align columns
+\begin{column}{.4\textwidth}
+\centering
+Original image
+\includegraphics[scale=0.25]{img/declutter1.png}
+\end{column}%
+\hfill%
+\begin{column}{.58\textwidth}
+Should the audience focus on something specific?
+\centering
+\includegraphics[scale=0.23]{img/declutter7.png}
+\end{column}%
+\end{columns}
+\tiny{Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015}
+\end{frame}
+
+\begin{frame}{Decluttering and preattentive attributes example}
+\begin{columns}[T] % align columns
+\begin{column}{.4\textwidth}
+\centering
+Original image
+\includegraphics[scale=0.25]{img/declutter1.png}
+\end{column}%
+\hfill%
+\begin{column}{.58\textwidth}
+Now let's add some text
+\centering
+\includegraphics[scale=0.23]{img/declutter9.png}
+\end{column}%
+\end{columns}
+\tiny{Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015}
+\end{frame}
+
+
+\begin{frame}{Color}
+
+\begin{itemize}
+    \item Don't change the colors of your graphs in the middle of a presentation - change in color means... change. It can be confusing to see same set of variables with different representations
+    \item Be mindful about cultural color connotations - the color you are using to make a statement, mean the same thing for everyone in your audience? See a guide from David McCandless in https://www.informationisbeautiful.net/visualizations/colours-in-cultures/ 
+    \item Design with the colorblind in mind - There are a few sites that allow you to check if your plot is understandable: http://vischeck.com
+https://www.color-blindness.com
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Color}
+
+Some best practices:
+\begin{itemize}
+    \item Use different shapes/markers or different types of lines
+    \begin{center} 
+    \includegraphics[scale=0.2]{img/cta.png}
+    \end{center}
+    \begin{tiny} 
+    https://www.cta-observatory.org/wp-content/uploads/2020/10/CTA\_ColourBlindness\_BestPractices-1.pdf
+    \end{tiny}
+    \item Avoid saying things based on color - use ''the dashed line represents...'' instead of ''the red line represents...''
+    \item Use friendly color palettes - see https://colorbrewer2.org/
+\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Types of Visuals}
+
+\begin{frame}{Types of Visuals}
+\centering
+\includegraphics[scale=0.3]{img/visuals.png}
+
+\tiny{https://seaborn.pydata.org/examples/index.html}
+\end{frame}
+
+\begin{frame}{Types of Visuals - numbers and tables}
+\begin{columns}[T] % align columns
+\begin{column}{.35\textwidth}
+Instead of:\\
+\begin{center} 
+\includegraphics[scale=0.3]{img/number1.png}
+\end{center}
+
+\end{column}%
+\hfill%
+\begin{column}{.63\textwidth}
+use the numbers directly\\
+\begin{center} 
+\includegraphics[scale=0.2]{img/number2.png}
+\end{center}
+
+Use the numbers when:
+\begin{itemize}
+    \item The graph isn't adding much in terms of interpretation
+    \item If you have one number or two
+    
+\end{itemize}
+\end{column}%
+\end{columns}
+\tiny{Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015}
+\end{frame}
+
+\begin{frame}{Types of Visuals - numbers and tables}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+When to use tables:
+\begin{itemize}
+    \item You are reading line by line
+    \item You have varied data - multiple units or metrics
+    \item To supplement the main story
+\end{itemize}
+
+\vspace{0.5cm}
+
+When shouldn't you use a table?
+\begin{itemize}
+    \item You are presenting your data live
+    \item To emphasize a pattern or shape
+\end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+Tables and heatmaps\\
+\includegraphics[scale=0.3]{img/table.png}
+
+\vspace{0.5cm}
+
+\includegraphics[scale=0.3]{img/heatmap.png}
+
+
+\end{column}%
+\end{columns}
+\end{frame}
+
+\begin{frame}{Types of Visuals - numbers and tables}
+Some best practices when using tables:
+\begin{itemize}
+    \item Remove unnecessary border and shading
+    \item Clarify the direction your audience should read the table
+    \item Incorporate a visual element
+    \item Alignment matters
+        \begin{itemize}
+            \item Numerical data is right aligned
+            \item Textual data is left aligned
+            \item Headers are aligned with their data
+            \item Don't use center alignment
+        \end{itemize}
+    \item Keep same number of digits (after decimal)
+    \item Provide labels to your data and order your table - relevant results to top left
+    \item Avoid huge chunks of text
+\end{itemize}
+% add loremipsum with audit table
+\tiny{Stephen Few, Show me the Numbers - for a chapter on the design of tables and best practices}\\
+\tiny{https://medium.com/mission-log/design-better-data-tables-430a30a00d8c}
+\end{frame}
+
+\begin{frame}{Scatter Plots and Bubbleplots}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+\begin{center}
+\includegraphics[scale=0.28]{img/scatter.png}
+\end{center}
+
+\tiny{https://ourworldindata.org/happiness-and-life-satisfaction}\\
+\tiny{https://blog.datawrapper.de/weekly-chart-lifesatisfaction/}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\begin{itemize}
+    \item Be mindful of variable placement - common practice: independent variable along the horizontal axis and dependent variable along the y axis
+    \item If you have more than two variables, you can alter the size, color or shape of points - bubble chart. Use these with caution...
+    \item Decluttering scatter plot: remove trendlines, make overlapping points transparent, create sections showing areas of interest
+\end{itemize}
+\end{column}%
+\end{columns}
+\end{frame}
+
+\begin{frame}{Line Plot}
+\begin{itemize}
+    \item One of the most used type of graphs in finance - checking data across time - market data, P\&L, forecasting, etc
+\end{itemize}
+
+\begin{center}
+    Avoid spaghetti graphs $\longrightarrow$ highlighting each curve separately in a different chart
+\end{center}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+
+\begin{center}
+\includegraphics[scale=0.2]{img/line1.png}
+\end{center}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\begin{center}
+\includegraphics[scale=0.2]{img/line2.png}
+\end{center}
+\end{column}%
+\end{columns}
+\tiny{Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015}
+\end{frame}
+
+\begin{frame}{Bar Charts}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+\begin{center}
+\includegraphics[scale=0.4]{img/bars.png}
+\end{center}
+\end{column}%
+\hfill%
+\begin{column}{.51\textwidth}
+\begin{itemize}
+    \item Use bars charts with categorical data or sorted in groups
+    
+    \vspace{0.5cm}
+    
+    \item Avoid (if possible) to use bar charts for time-series with many points
+    
+    \vspace{0.5cm}
+    
+    \item It is encoded by length - easy to compare and easy for your audience to read!
+\end{itemize}
+\end{column}%
+\end{columns}
+\end{frame}
+
+\begin{frame}{Bar Charts}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+When creating bar charts, pay attention to:
+\begin{itemize}
+    \item Order the bars if possible (like from largest to smallest)
+    \item Add legend if you can't add the label directly to the graph
+    \item Adjust the gap between bars\\
+    \item Use histograms if you want to understand the underlying distribution - numerical data series
+\end{itemize}
+\end{column}%
+\hfill%
+\begin{column}{.51\textwidth}
+\begin{center}
+\includegraphics[scale=0.22]{img/barsize.png}
+
+\vspace{0.5cm}
+
+\includegraphics[scale=0.22]{img/barhist.png}
+\end{center}
+\end{column}%
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Bar Charts}
+\begin{itemize}
+    \item Use zero baseline! Data is encoded by length so full range should be presented or it could be misleading
+\end{itemize}
+
+
+
+\includegraphics[scale=0.4]{img/baseline.png}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Which Visuals to Avoid}
+
+
+\begin{frame}{Stacked Area Graphs}
+Baseline Matters! The baseline for the top curves are the curves below. What happens if we change the order?
+
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+\centering 
+\includegraphics[scale=0.19]{img/stacked1.png}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\centering
+\includegraphics[scale=0.19]{img/stacked2.png}
+\end{column}%
+\end{columns}
+\begin{tiny}
+Myles Harrison at https://everydayanalytics.ca/2014/08/stacked-area-graphs-are-not-your-friend.html
+\end{tiny}
+
+Alternative: Just use line graphs for each series (but be careful with spaghetti graphs)
+\end{frame}
+
+\begin{frame}{Secondary y-axis}
+\begin{itemize}
+    \item Makes it difficult to see which data should be read against which axis
+    \item Implies a relationship that may or may not exist
+\end{itemize}
+
+\begin{columns}[T] % align columns
+\begin{column}{.34\textwidth}
+\centering 
+\includegraphics[scale=0.3]{img/doubleaxis1.png}
+\end{column}%
+\hfill%
+\begin{column}{.62\textwidth}
+\includegraphics[scale=0.3]{img/doubleaxis2.png}
+\end{column}%
+\end{columns}
+\tiny{Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015}
+\end{frame}
+
+\begin{frame}{Which Visuals to Avoid - 3D}
+\begin{itemize}
+    \item Skew the numbers - difficult to compare
+    \item Add unnecessary elements (floor and walls)
+    \item Use 3D only if you actually need a 3D graph (xyz axes)
+\end{itemize}
+
+\begin{center}
+\includegraphics[scale=0.5]{img/3d.png}
+\end{center}
+
+
+\end{frame}
+
+\begin{frame}{Pie Charts}
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+Which one looks larger?
+
+\centering
+\includegraphics[scale=0.21]{img/pie1.png}
+\includegraphics<2->[scale=0.21]{img/pie2.png}
+\end{column}%
+\hfill%
+\begin{column}<3->{.48\textwidth}
+Some rules:
+\begin{itemize}
+    \item Proper formatting - no 3D, exploding slices, etc
+    \item nominal variables
+    \item add to 100\%
+    \item contain positive numbers 
+    \item single point in time
+    \item two or three slices
+    \item no comparison across pie charts
+\end{itemize}
+\end{column}%
+\end{columns}
+\tiny{Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015}
+
+
+\end{frame}
+
+\begin{frame}{Pie Chart: Alternatives}
+\begin{columns}[T] % align columns
+\begin{column}{.49\textwidth}
+Ordinal data $\longrightarrow$ stacked or column chart
+\includegraphics[scale=0.22]{img/pie3.png}
+
+Patterns over time $\longrightarrow$ timeseries
+\includegraphics[scale=0.22]{img/pie5.png}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+Negative numbers $\longrightarrow$ deviation chart
+\includegraphics[scale=0.22]{img/pie4.png}
+
+More than 3 categories $\longrightarrow$ bar chart
+\includegraphics[scale=0.22]{img/pie6.png}
+\end{column}%
+\end{columns}
+\tiny{https://depictdatastudio.com/when-pie-charts-are-okay-seriously-guidelines-for-using-pie-and-donut-charts/}
+\end{frame}
+
+
+
+
+\begin{frame}{Pie Chart: Alternatives}
+
+Let's see one specific example...
+
+    \begin{center}
+        \includegraphics[scale=0.25]{img/pie_alt.png}
+    \end{center}
+\begin{tiny}
+Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015
+\end{tiny}
+
+Your eyes have to jump from one pie to the other in order to make comparisons...
+\end{frame}
+
+\begin{frame}{Pie Chart: Alternatives}
+
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+    Show the numbers
+    \begin{center}
+    \includegraphics[scale=0.17]{img/pie_alt1.png}
+    \end{center}
+    100\% stacked bar
+    \begin{center}
+    \includegraphics[scale=0.17]{img/pie_alt3.png}
+    \end{center}
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+    Bar chart
+    \begin{center}
+        \includegraphics[scale=0.155]{img/pie_alt2.png}
+    \end{center}
+    Slope graph
+    \begin{center}
+        \includegraphics[scale=0.16]{img/pie_alt4.png}
+    \end{center}
+\end{column}%
+\end{columns}
+\tiny{Knaflic, Cole. Storytelling With Data: A Data Visualization Guide for Business Professionals, Wiley, © 2015}
+\end{frame}
+
+
+\section{Final Remarks}
+
+\begin{frame}{Final Remarks}
+
+We talked about some common types of graphs and best practices around them, tricky charts to get it right and how you can leverage color and other preattentive attributes to do explanatory analysis and present those results in a meaninful way. Now, if you want to practice data visualization on different datasets, check
+    
+    \begin{center}
+      https://www.makeovermonday.co.uk
+    \end{center}
+How it works:
+\begin{itemize}
+    \item Every week (until end of 2021) they would publish a dataset
+    \item People would make analysis and visual representation
+    \item Publish on social media to get feedback and improve their visualization skills
+    \item Different people will have different approaches to present the same data!
+\end{itemize}
+
+
+\end{frame}
